@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,50 +10,57 @@
     <!--Iconos de Font Awesome-->
     <script src="https://kit.fontawesome.com/c90a8fcf3a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <!--Layout-->
     <div class="layout">
+        <!--Header-->
+        <header class="header bg-header f-r f-st-cen">
+            <!--Header/Logo-->
+            <div class="logo-img">
+                <img src="#" alt="Logotipo">
+            </div>
+            <!--Header/Title-->
+            <h1 class="txt-title">Turis<span>Mundo</span></h1>
+        </header>
         <!--Navbar-->
-        <nav class="nav bg-nav">
-            <!--Navbar/Logotipo-->
-            <div class="logo">
-                <h1 class="txt-title">TurisMundo</h1>
-                <div class="logo-img">
-                    <img src="#" alt="Logotipo">
-                </div>
-            </div>
+        <nav class="nav">
             <!--Navbar/Menu-->
-            <div class="menu">
-                <ul class="menu-list">
-                    <li class="list-element txt-menu">Inicio</li>
-                    <li class="list-element txt-menu">Catálogo</li>
-                    <li class="list-element txt-menu">Contacto</li>
-                </ul>
-            </div>
-            <!--Navbar/Menu Icon-->
-            <div class="menu-icon">
-                <i class="fa-sharp fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
-            </div>
+            <section class="nav-menu bg-nav-menu">
+                <!--Navbar/Body/Menu-->
+                <div class="menu">
+                    <ul class="menu-list">
+                        <li class="list-element txt-menu">Inicio</li>
+                        <li class="list-element txt-menu">Catálogo</li>
+                        <li class="list-element txt-menu">Contacto</li>
+                    </ul>
+                </div>
+                <!--Navbar/Body/Menu Icon-->
+                <div class="menu-icon">
+                    <i class="fa-sharp fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+                </div>
+            </section>
+            <!--Navbar/Browser-->
+            <section class="nav-browser bg-nav-browser">
+                <h2 class="txt-subtitle-1">Busqueda Avanzada</h2>
+                <!--Navbar/Browser/Form-->
+                <form action="" method="get" class="form">
+                    <div class="form-search">
+                        <label class="txt-label" for="search">Buscar: </label>
+                        <input type="text" name="search" class="search txt-form" />
+                        <input type="submit" class="btn-search txt-form" value="Buscar" />
+                    </div>
+                    <div class="form-filter">
+                        <label class="txt-label" for="select">Ordenar por: </label>
+                        <select class="select txt-form" name="select">
+                            <option value="orden-az" selected>A--Z</option>
+                            <option value="orden-precio-menor">Precio Menor</option>
+                            <option value="orden-precio-mayor">Precio Mayor</option>
+                        </select>
+                    </div>
+                </form>
+            </section>
         </nav>
-        <!--Browser-->
-        <section class="browser bg-browser">
-            <h2 class="txt-subtitle-1">Busqueda Avanzada</h2>
-            <form action="" method="get" class="form">
-                <div class="form-search">
-                    <label class="txt-label" for="search">Buscar: </label>
-                    <input type="text" name="search" class="search txt-form"/>
-                    <input type="submit" class="btn-search txt-form" value="Buscar"/>
-                </div>
-                <div class="form-filter">
-                    <label class="txt-label" for="select">Ordenar por: </label>
-                    <select class="select txt-form" name="select">
-                        <option value="orden-az" selected>A--Z</option>
-                        <option value="orden-precio-menor">Precio Menor</option>
-                        <option value="orden-precio-mayor">Precio Mayor</option>
-                    </select>
-                </div>
-            </form>
-        </section>
         <!--Main-->
         <main class="main bg-main">
             <!--Main/Container Grid-->
@@ -93,4 +101,5 @@
         </footer>
     </div>
 </body>
+
 </html>

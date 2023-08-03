@@ -23,11 +23,15 @@ body {
 /* ------------------------------------------------------- */
 /* Background Color */
 
-.bg-nav{
+.bg-header{
     background-color: darkgray;
 }
 
-.bg-browser{
+.bg-nav-menu{
+    background-color: darkgray;
+}
+
+.bg-nav-browser{
     background-color: lightgray;
 }
 
@@ -36,9 +40,86 @@ body {
 }
 
 .bg-footer{
-    background-color: royalblue;
+    background-color: #2573da;
 }
 
 /* ------------------------------------------------------- */
-/* Layout */
+/* Layout, Areas */
 
+.header{
+    grid-area: header;
+}
+
+.nav{
+    grid-area: nav;
+}
+
+.main{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.layout{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+    gap: 0;
+    grid-template-rows: 5vh 10vh 75vh 10vh;
+    grid-template-columns: 1fr;
+}
+
+/* ------------------------------------------------------- */
+/*Estilos Flex*/
+
+.f-r{
+    display:flex;
+    flex-direction: row;
+}
+
+.f-c{
+    display:flex;
+    flex-direction: column;
+}
+
+.f-st-st{
+    justify-content: start;
+    align-items: start;
+}
+
+.f-st-cen{
+    justify-content: start;
+    align-items: center;
+}
+
+.f-cen-st{
+    justify-content: center;
+    align-items: start;
+}
+
+.f-cen-cen{
+    justify-content: center;
+    align-items: center;
+}
+
+.f-bet-st{
+    justify-content:space-between;
+    align-items: start;
+}
+
+.f-bet-cen{
+    justify-content:space-between;
+    align-items: center;
+}
+
+.f-ev-cen{
+    justify-content:space-evenly;
+    align-items: center;
+}
