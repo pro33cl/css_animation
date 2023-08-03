@@ -1,0 +1,44 @@
+/* style.css */
+
+/* ------------------------------------------------------------------------- */
+/*Importando Fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* ------------------------------------------------------------------------- */
+/*Formateando*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------------------------------------------------- */
+/* ESTILOS POR DEFECTO (device-width <=576px)*/
+/* ------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------- */
+/* Background Color */
+
+.bg-nav{
+    background-color: darkgray;
+}
+
+.bg-browser{
+    background-color: lightgray;
+}
+
+.bg-main{
+    background-color: white;
+}
+
+.bg-footer{
+    background-color: royalblue;
+}
+
+/* ------------------------------------------------------- */
+/* Layout */
+
