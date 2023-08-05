@@ -15,54 +15,55 @@
     <!--Layout-->
     <div class="layout">
         <!--Header-->
-        <header class="header bg-header f-r f-st-cen">
+        <header class="header">
             <!--Header/Logo-->
             <div class="logo-img">
-                <img src="#" alt="Logotipo">
+                <img src="assets/imgs/logo-icon.png" alt="Logotipo">
             </div>
             <!--Header/Title-->
-            <h1 class="txt-title">Turis<span>Mundo</span></h1>
+            <h1 class="txt-title-1">Turis<span class="txt-title-2">Mundo</span></h1>
         </header>
-        <!--Navbar-->
-        <nav class="nav">
-            <!--Navbar/Menu-->
-            <section class="nav-menu bg-nav-menu">
-                <!--Navbar/Body/Menu-->
-                <div class="menu">
-                    <ul class="menu-list">
-                        <li class="list-element txt-menu">Inicio</li>
-                        <li class="list-element txt-menu">Catálogo</li>
-                        <li class="list-element txt-menu">Contacto</li>
-                    </ul>
-                </div>
-                <!--Navbar/Body/Menu Icon-->
-                <div class="menu-icon">
-                    <i class="fa-sharp fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
-                </div>
-            </section>
-            <!--Navbar/Browser-->
-            <section class="nav-browser bg-nav-browser">
+        <!--Navbar/Menu-->
+        <section class="nav-menu">
+            <!--Navbar/Body/Menu-->
+            <div class="menu">
+                <ul class="menu-list">
+                    <li class="list-element txt-menu">Inicio</li>
+                    <li class="list-element txt-menu">Catálogo</li>
+                    <li class="list-element txt-menu">Contacto</li>
+                </ul>
+            </div>
+            <!--Navbar/Body/Menu Icon-->
+            <div class="menu-icon">
+                <i class="fa-sharp fa-solid fa-bars fa-xl" style="color: #696969;"></i>
+            </div>
+        </section>
+        <!--Navbar/Browser-->
+        <section class="nav-browser">
+            <div class="browser-title">
                 <h2 class="txt-subtitle-1">Busqueda Avanzada</h2>
-                <!--Navbar/Browser/Form-->
-                <form action="" method="get" class="form">
-                    <div class="form-search">
-                        <label class="txt-label" for="search">Buscar: </label>
-                        <input type="text" name="search" class="search txt-form" />
+            </div>
+            <!--Navbar/Browser/Form-->
+            <form action="" method="get" class="form">
+                <div class="form-search">
+                    <label class="txt-label" for="search">Buscar:</label>
+                    <div class="search">
+                        <input type="text" name="search" class="box-search txt-form" />
                         <input type="submit" class="btn-search txt-form" value="Buscar" />
                     </div>
-                    <div class="form-filter">
-                        <label class="txt-label" for="select">Ordenar por: </label>
-                        <select class="select txt-form" name="select">
-                            <option value="orden-az" selected>A--Z</option>
-                            <option value="orden-precio-menor">Precio Menor</option>
-                            <option value="orden-precio-mayor">Precio Mayor</option>
-                        </select>
-                    </div>
-                </form>
-            </section>
-        </nav>
+                </div>
+                <div class="form-filter">
+                    <label class="txt-label" for="select">Ordenar por:</label>
+                    <select class="box-select txt-form" name="select">
+                        <option value="orden-az" selected>A--Z</option>
+                        <option value="orden-precio-menor">Precio Menor</option>
+                        <option value="orden-precio-mayor">Precio Mayor</option>
+                    </select>
+                </div>
+            </form>
+        </section>
         <!--Main-->
-        <main class="main bg-main">
+        <main class="main">
             <!--Main/Container Grid-->
             <section class="contanier-grid">
                 <!--Card-->
@@ -88,7 +89,7 @@
             </section>
         </main>
         <!--Footer-->
-        <footer class="footer bg-footer">
+        <footer class="footer">
             <!--Footer/Icons-->
             <div class="footer-icons">
                 <i class="fa-brands fa-facebook fa-lg" style="color: #ffffff;"></i>

@@ -21,27 +21,226 @@ body {
 /* ------------------------------------------------------------------------- */
 
 /* ------------------------------------------------------- */
-/* Background Color */
+/*Estilos de Textos*/
+/* ------------------------------------------------------- */
 
-.bg-header{
-    background-color: darkgray;
+.txt-title-1{
+    color:#252525;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: start;
 }
 
-.bg-nav-menu{
-    background-color: darkgray;
+.txt-title-2{
+    color: #252525;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: start;
 }
 
-.bg-nav-browser{
+.txt-subtitle-1{
+    color:dimgray;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.txt-subtitle-2{
+
+}
+
+.txt-label{
+    color:dimgray;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.txt-form{
+    color:dimgray;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: start;
+}
+
+.txt-menu{
+    color:#252525;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    list-style: none;
+
+}
+
+.txt-card-info-1{
+
+}
+
+.txt-card-info-2{
+
+}
+
+.txt-card-info-3{
+
+}
+
+.txt-btn{
+
+}
+
+.txt-footer{
+    color:white;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+/* ------------------------------------------------------- */
+/*Estilos Contenedores*/
+/* ------------------------------------------------------- */
+
+/* Estilos Header */
+.header{
     background-color: lightgray;
+    padding: 1rem;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    border-style: none;
+    border: 0;
 }
 
-.bg-main{
+img{
+    width: 100%;
+}
+
+.logo-img{
+    height: 2rem;
+    width: 2rem;
+}
+
+
+/* Estilos Navbar-Menu*/
+
+.nav-menu{
+    background-color: lightgray;
+    padding: 1rem;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    border-style: none;
+    border: 0;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-element{
+    display:none;
+    padding: 0.5rem 0.25rem 0.5rem 0.25rem;
+}
+
+.menu-icon{
+    display:block;
+}
+
+/* Estilos Navbar-Browser */
+
+.nav-browser{
+    background-color: lightgray;
+    padding: 0 1rem 0 1rem;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border: 0;
+}
+
+
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.browser-title{
+    display: none;
+}
+
+.form-search{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-search{
+    margin: 0;
+    border-style: none;
+    border-radius: 0.1rem;
+}
+
+.btn-search{
+    border-style: none;
+    border-radius: 0.1rem;
+    margin: 0 0.2rem 0 0.2rem;
+}
+
+.form-filter{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.box-select{
+    margin: 0;
+    border-style: none;
+    border-radius: 0.1rem;
+}
+
+
+/* Estilos Main*/
+.main{
     background-color: white;
+    border: 0;
 }
 
-.bg-footer{
+
+/* Estilos Footer*/
+.footer{
     background-color: #2573da;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
 
 /* ------------------------------------------------------- */
 /* Layout, Areas */
@@ -50,8 +249,12 @@ body {
     grid-area: header;
 }
 
-.nav{
-    grid-area: nav;
+.nav-menu{
+    grid-area: nav-menu;
+}
+
+.nav-browser{
+    grid-area: nav-browser;
 }
 
 .main{
@@ -67,13 +270,13 @@ body {
     height: 100vh;
     display: grid;
     grid-template-areas: 
-    "header"
-    "nav"
-    "main"
-    "footer";
+    "header nav-menu"
+    "nav-browser nav-browser"
+    "main main"
+    "footer footer";
     gap: 0;
-    grid-template-rows: 5vh 10vh 75vh 10vh;
-    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 7vh 73vh 10vh;
+    grid-template-columns: 45vw 55vw ;
 }
 
 /* ------------------------------------------------------- */
