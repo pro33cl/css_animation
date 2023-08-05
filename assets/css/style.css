@@ -46,7 +46,10 @@ body {
 }
 
 .txt-subtitle-2{
-
+    color:#252525;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
 }
 
 .txt-label{
@@ -54,6 +57,7 @@ body {
     font-size: 0.8rem;
     font-weight: 400;
     text-align: center;
+    display: none;
 }
 
 .txt-form{
@@ -61,6 +65,13 @@ body {
     font-size: 0.8rem;
     font-weight: 400;
     text-align: start;
+}
+
+.txt-form-btn{
+    color:dimgray;
+    font-size: 0.6rem;
+    font-weight: 400;
+    text-align: center;
 }
 
 .txt-menu{
@@ -73,18 +84,32 @@ body {
 }
 
 .txt-card-info-1{
-
+    color:dimgray;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
 }
 
 .txt-card-info-2{
-
+    color:#252525;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: justify;
+    margin: 0.5rem 0 0.5rem 0;
 }
 
 .txt-card-info-3{
-
+    color:dimgray;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: end;
 }
 
-.txt-btn{
+.txt-card-btn{
+    color:white;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
 
 }
 
@@ -103,19 +128,16 @@ body {
 /* Estilos Header */
 .header{
     background-color: lightgray;
-    padding: 1rem;
-    width: auto;
-    height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    border-style: none;
-    border: 0;
+    
 }
 
 img{
     width: 100%;
+    height: auto;
 }
 
 .logo-img{
@@ -129,14 +151,10 @@ img{
 .nav-menu{
     background-color: lightgray;
     padding: 1rem;
-    width: auto;
-    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    border-style: none;
-    border: 0;
 }
 
 .menu-list{
@@ -158,15 +176,12 @@ img{
 /* Estilos Navbar-Browser */
 
 .nav-browser{
-    background-color: lightgray;
-    padding: 0 1rem 0 1rem;
-    width: auto;
-    height: auto;
+    padding: 1rem;
+    background-color:#e3e3e3;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    border: 0;
 }
 
 
@@ -200,12 +215,16 @@ img{
 .box-search{
     margin: 0;
     border-style: none;
-    border-radius: 0.1rem;
+    border-radius: 0.2rem;
 }
 
 .btn-search{
-    border-style: none;
-    border-radius: 0.1rem;
+    border-style: solid;
+    background-color: #e3e3e3;
+    border-width: 1px;
+    border-color: dimgray;
+    border-radius: 0.2rem;
+    padding: 0.1rem;
     margin: 0 0.2rem 0 0.2rem;
 }
 
@@ -219,14 +238,79 @@ img{
 .box-select{
     margin: 0;
     border-style: none;
-    border-radius: 0.1rem;
+    border-radius: 0.2rem;
 }
 
 
 /* Estilos Main*/
 .main{
     background-color: white;
-    border: 0;
+    padding: 1rem;
+}
+
+.container-grid{
+    height: 100%;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    overflow: auto;
+
+}
+
+/* Estilos Card */
+
+.card{
+    background-color: white;
+    width: calc(100%-2rem);
+    padding: 0.2rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: dimgray;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 5px -3px darkgray;
+    transition: background-color 1.5s ease-out;
+
+}
+
+.card-header{
+    width: 100%;
+}
+
+.card-img{
+    border-radius: 0.2rem;
+    filter:grayscale(1);
+    transition: filter 1.5s ease-out;
+}
+
+.card-body{
+    width: auto;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    flex-basis: 10rem;
+}
+
+.card-footer{
+    width: 100%;
+    padding: 0.5rem 0 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    flex-basis: 2rem;
+    border-style: solid;
+    border-color: dimgray;
+    border-width: 1px 0 0 0;
+}
+
+.card-btn{
+    background-color: #2573da;
+    padding: 0.3rem;
+    border-style: none;
+    border-radius: 0.2rem;
 }
 
 
@@ -238,9 +322,6 @@ img{
     justify-content: center;
     align-items: center;
 }
-
-
-
 
 /* ------------------------------------------------------- */
 /* Layout, Areas */
@@ -275,54 +356,69 @@ img{
     "main main"
     "footer footer";
     gap: 0;
-    grid-template-rows: 10vh 7vh 73vh 10vh;
+    grid-template-rows: 9vh 5vh 78vh 8vh;
     grid-template-columns: 45vw 55vw ;
 }
 
 /* ------------------------------------------------------- */
-/*Estilos Flex*/
+/*Estilos Eventos*/
 
-.f-r{
-    display:flex;
-    flex-direction: row;
+.card:hover .card-img{
+    filter:none;
 }
 
-.f-c{
-    display:flex;
-    flex-direction: column;
+.card:hover{
+    background-color: rgb(225, 237, 237);
 }
 
-.f-st-st{
-    justify-content: start;
-    align-items: start;
+/* ------------------------------------------------------------------------- */
+/* ESTILOS PARA PANTALLAS MAYORES A 576px Y MENORES A 992px, PANTALLAS TABLET*/
+/* ------------------------------------------------------------------------- */
+
+@media(min-width: 576px){
+
+    /* ------------------------------------------------------- */
+    /* Layout, Areas */
+
+    .layout{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "nav-menu main" 
+        "nav-browser main"
+        "footer footer";
+        gap: 0;
+        grid-template-rows: 9vh 43vh 40vh 8vh;
+        grid-template-columns: 20vw 80vw ;
+    }
+
+    .container-grid{
+        height: 100%;
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        overflow: auto;
+    
+    }
+
+    .card{ 
+        width: calc(50%-1.5rem);
+    }
+
+
+
 }
 
-.f-st-cen{
-    justify-content: start;
-    align-items: center;
-}
 
-.f-cen-st{
-    justify-content: center;
-    align-items: start;
-}
+/* ------------------------------------------------------------------------- */
+/* ESTILOS PARA PANTALLAS MAYORES A 992px, PANTALLAS ESCRITORIO*/
+/* ------------------------------------------------------------------------- */
 
-.f-cen-cen{
-    justify-content: center;
-    align-items: center;
-}
+@media(min-width: 992px){
 
-.f-bet-st{
-    justify-content:space-between;
-    align-items: start;
-}
 
-.f-bet-cen{
-    justify-content:space-between;
-    align-items: center;
-}
 
-.f-ev-cen{
-    justify-content:space-evenly;
-    align-items: center;
 }
