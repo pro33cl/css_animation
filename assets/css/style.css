@@ -40,7 +40,7 @@ body {
 
 .txt-subtitle-1{
     color:dimgray;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     text-align: center;
 }
@@ -113,9 +113,17 @@ body {
 
 }
 
+.txt-index{
+    color:#2573da;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+}
+
 .txt-footer{
     color:white;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
     text-align: center;
 
@@ -128,11 +136,11 @@ body {
 /* Estilos Header */
 .header{
     background-color: lightgray;
+    padding: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
 }
 
 img{
@@ -166,6 +174,7 @@ img{
 
 .list-element{
     display:none;
+    width: auto;
     padding: 0.5rem 0.25rem 0.5rem 0.25rem;
 }
 
@@ -216,6 +225,7 @@ img{
     margin: 0;
     border-style: none;
     border-radius: 0.2rem;
+    width: 100%;
 }
 
 .btn-search{
@@ -246,6 +256,10 @@ img{
 .main{
     background-color: white;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container-grid{
@@ -283,7 +297,7 @@ img{
 
 .card-img{
     border-radius: 0.2rem;
-    filter:grayscale(1);
+    filter: none;
     transition: filter 1.5s ease-out;
 }
 
@@ -311,6 +325,48 @@ img{
     padding: 0.3rem;
     border-style: none;
     border-radius: 0.2rem;
+}
+
+/* Estilos Index*/
+
+.container-index{
+    background-color: white;
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.index-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-num{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-style: solid;
+    border-color:lightgray;
+    border-width: 1px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.index-start{
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+}
+
+.index-end{
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
 }
 
 
@@ -363,12 +419,24 @@ img{
 /* ------------------------------------------------------- */
 /*Estilos Eventos*/
 
-.card:hover .card-img{
-    filter:none;
+.card:hover{
+    background-color: darkgray;
 }
 
-.card:hover{
-    background-color: rgb(225, 237, 237);
+.card:hover .card-img{
+    filter:sepia(0.5);
+}
+
+.card-btn:active{
+    background-color: #3d5f8b;
+}
+
+.card-btn:active .txt-card-btn{
+    color:darkgray;
+}
+
+.index-num:hover{
+    background-color: #e3e3e3;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -381,33 +449,82 @@ img{
     /* Layout, Areas */
 
     .layout{
-        width: 100vw;
-        height: 100vh;
-        display: grid;
         grid-template-areas: 
-        "header header"
-        "nav-menu main" 
-        "nav-browser main"
+        "header nav-menu"
+        "nav-browser main" 
         "footer footer";
-        gap: 0;
-        grid-template-rows: 9vh 43vh 40vh 8vh;
+        
+        grid-template-rows: 9vh 82vh 9vh;
         grid-template-columns: 20vw 80vw ;
     }
 
-    .container-grid{
-        height: 100%;
-        width: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        overflow: auto;
-    
+    /* ------------------------------------------------------- */
+    /*Estilos Contenedores*/
+    /* ------------------------------------------------------- */
+
+    /* Estilos Navbar-Menu*/
+
+    .nav-menu{
+        background-color: lightgray;
+        flex-direction: row;
+        justify-content: end;
     }
+    
+    .menu-list{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .list-element{
+        display:block;
+        width: auto;
+        padding: 0.5rem 0.25rem 0.5rem 0.25rem;
+    }
+    
+    .menu-icon{
+        display:none;
+    }
+
+    /* Estilos Navbar-Browser */
+
+    .nav-browser{
+        background-color:#e3e3e3;
+        justify-content: start;
+    }
+    
+    .form{
+        flex-direction: column;
+    }
+    
+    .browser-title{
+        display: block;
+    }
+    
+    .search{
+        flex-direction: column;
+    }
+
+    .box-search{
+        margin: 1rem 0 1rem 0;
+    }
+
+    .box-select{
+        margin: 1rem 0 1rem 0;
+    }
+
+    /* Estilos Main*/
+
+    .container-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Estilos Card */
 
     .card{ 
         width: calc(50%-1.5rem);
     }
-
 
 
 }
@@ -418,6 +535,98 @@ img{
 /* ------------------------------------------------------------------------- */
 
 @media(min-width: 992px){
+    
+    /* ------------------------------------------------------- */
+    /* Layout, Areas */
+
+    .layout{
+        grid-template-areas: 
+        "header header"
+        "nav-menu main"
+        "nav-browser main"  
+        "footer footer";
+        
+        grid-template-rows: 9vh 15vh 67vh 9vh;
+        grid-template-columns: 15vw 85vw ;
+
+    }
+
+    /* ------------------------------------------------------- */
+    /*Estilos Contenedores*/
+    /* ------------------------------------------------------- */
+
+    /* Estilos Navbar-Menu*/
+
+    .nav-menu{
+        background-color:#e3e3e3;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .menu-list{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list-element{
+        display:block;
+        width: 100%;
+        padding: 0.25rem 1.5rem 0.25rem 1.5rem;
+    }
+    
+    .menu-icon{
+        display:none;
+    }
+
+    /* Estilos Navbar-Browser */
+
+    .nav-browser{
+        background-color:#e3e3e3;
+        justify-content: start;
+    }
+    
+    .form{
+        flex-direction: column;
+    }
+    
+    .browser-title{
+        display: block;
+    }
+    
+    .search{
+        flex-direction: column;
+    }
+
+    .box-search{
+        margin: 1rem 0 1rem 0;
+    }
+
+    .box-select{
+        margin: 1rem 0 1rem 0;
+    }
+
+    /* Estilos Main*/
+
+    .container-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    /* Estilos Card */
+
+    .card{ 
+        width: calc(25%-1.25rem);
+    }
+
+    /* ------------------------------------------------------- */
+    /*Estilos Eventos*/
+
+    .list-element:hover{
+        background-color: darkgray;
+    }
+
+
+}
 
 
 
