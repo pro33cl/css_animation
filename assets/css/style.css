@@ -288,10 +288,11 @@ img{
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    overflow: auto;
 }
 
 .front-logo{
-    width: 100%;
+    width: 99%;
     height: 8rem;
     background-image: url(../imgs/front-img.jpg);
     background-position-y: 40%;
@@ -315,18 +316,15 @@ img{
 .front-info{
     width: 100%;
     height: auto;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    overflow: auto;
 }
 
 .form-contact{
-    width: 100%;
-    height: auto;
-    overflow: auto;
+    width: 99%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -348,7 +346,6 @@ img{
     border-width: 1px;
     border-color: dimgray;
     border-radius: 0.2rem;    
-    text-overflow:ellipsis;
 }
 
 
